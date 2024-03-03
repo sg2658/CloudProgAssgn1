@@ -68,7 +68,7 @@ Here are the steps,
 ->  To handle these pending messages, I will SSH into the second EC2 instance and run the text recognition Java application. Execute the command 
     "java -jar AWSTextRekognition.jar" over SSH to start the jar file. This should trigger the text recognition program to begin processing the 6 queued messages containing images to analyze.
 ## OUTPUT (COMMUNICATION OF TWO EC2s in SQS):
-38. I ran the jar file with command java -jar <application.jar> first in EC2-A to recognize the image first and push it to the queue in SQS. While this EC2-A is recognizing the second image, the EC2-B will fetch the first image recognized by EC2-A present in the SQS Queue to recognize the text and prints the confidence.  
+38. I ran the jar file with command java -jar <application.jar> first in EC2-A to recognize the image first and push it to the queue in SQS. While this EC2-A is recognizing the second image, the EC2-B will fetch the first image recognized by EC2-A present in the SQS Queue to recognize the text and prints the corresponding text of the image. 
 39. Finally We will get the output as expected.
 
 
